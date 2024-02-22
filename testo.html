@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://public-assets.envato-static.com/assets/logos/envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg" type="image/png">
+    <title>TESTO</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://martfury.pl/testo/shopify/assests/images/bg-01.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif; 
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #262626 ;
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            max-width: 150px;
+            border-radius: 5px; 
+        }
+
+        #buyButton {
+            background-color: #6f9a37;
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #smallImage {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            max-width: 100%;
+            border-radius: 5px; 
+        }
+
+        #rightCornerImage {
+            position: absolute;
+            top: 50px;
+            right: -180px;
+            max-width: 100%;
+            border-radius: 5px; 
+        }
+
+        h2 {
+            color: #e3000e;
+            position: relative;
+            font-family: 'Oswald',cursive;
+            display: block;
+            font-weight: 500;
+            font-size: 12rem;
+            z-index: 15;
+            text-transform: uppercase;
+            text-shadow: #fff 4px 4px 0, #fff -4px -4px 0, #fff -4px 4px 0, #fff 4px -4px 0;
+        }
+
+        #additionalText {
+            position: relative;
+            color: #bbb;
+            font-size: 1.35rem;
+            margin-top: 20px;
+            margin-bottom: 20px; 
+            display: block;
+        }
+
+        #contentContainer {
+            text-align: center; 
+            max-width: 50%; 
+            margin: 0 auto; 
+            padding-top: 150px;
+        }
+
+        #onion {
+            max-width: 80%;
+            display: block;
+            margin-top: -130px;
+            margin-left: -50px; 
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: -180px;
+        }
+
+        .image-card {
+            max-width: 400px;
+            margin: 20px;
+            transition: transform 0.4s ease-in-out;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .image-card img {
+            max-width: 100%;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-info {
+            text-align: center;
+            color: #fff;
+            padding: 15px;
+            
+        }
+
+        .card-info h3 {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .card-info p {
+            color: #bbb;
+        }
+
+        .banner-section {
+            background-image: url('https://martfury.pl/testo/shopify/assests/images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding: 300px 120px;
+        }
+
+        .banner-text-container {
+            max-width: 900px;
+            margin: -300px auto 0;
+            padding: 100px;
+            text-align: center;
+        }
+
+        .banner-section h4 {
+            font-size: 35px;
+            color: #fff;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+        }
+
+        .banner-section h3 {
+            font-family: 'Lilita One';
+            font-size: 55px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .banner-section p {
+            font-size: 18px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .banner-image {
+            max-width: 70%;
+            margin: 0 auto;
+            display: block;
+            margin-top: -400px;
+        }
+
+        .second-banner-section {
+            background-image: url('https://martfury.pl/testo/shopify/assests/images/banner-2.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding: 400px 90px;
+        }
+
+        .second-banner-section h4 {
+            color: #642f21;
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.3;
+            font-weight: 500;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-top: -280px;
+            margin-bottom: 10px;
+        }
+
+        .second-banner-section h3 {
+            font-size: 40px;
+            font-family: 'Lilita One', cursive;
+            color: #642f21;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .second-banner-section p {
+            padding: 0 4%;
+            color: #642f21;
+            margin-top: -10px;
+            max-width: 50%;
+            margin: 0 auto; 
+        }
+
+        .second-banner-image {
+            display: block;
+            max-width: 74%;
+            margin: 0 auto;
+            margin-top: -500px;
+        }
+
+        @media (max-width: 767px) {
+            .second-banner-image {
+                margin-top: -400px;
+            }
+        }
+
+        .inner-pages-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .inner-pages-title {
+            color: #e3000e;
+            font-size: 74px;
+            margin-bottom: 20px;
+        }
+
+        .inner-pages-text {
+            color: #bbb;
+            font-size: 22px;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .inner-pages-image {
+            max-width: 100%;
+            display: block;
+            border-radius: 5px;
+            margin-top: -220px;
+            margin-left: -80px; 
+        }
+
+        #leaf{
+            position: absolute;
+            margin-top: -410px;
+            right: -50px;
+        }
+
+        .small-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: -150px;
+            padding: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .small-card {
+            flex-basis: calc(20% - 10px);
+            margin: 0 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .card-image {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .small-card:hover .card-image img {
+            transform: translateY(-5px);
+        }
+
+        .small-card-text {
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            /* background-color: #333; */
+            border-radius: 0 0 10px 10px;
+        }
+
+        .copyright-section {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .copyright-section p {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://public-assets.envato-static.com/assets/logos/envato_market-dde916a48af7413e54aa058fe7ae6856752fca799da4bec355f00aea904bfa19.svg" alt="Envato Market" id="logo">
+        <a href="#" id="buyButton">Buy Now</a>
+    </header>
+    <img src="https://martfury.pl/testo/shopify/assests/images/img-02.png" alt="Small Image" id="smallImage">
+    <img src="https://martfury.pl/testo/shopify/assests/images/img-01.png" alt="Right Corner Image" id="rightCornerImage">
+    <div id="contentContainer">
+        <h2>TESTO</h2>
+        <p id="additionalText">Premium Shopify 2.0 theme created to offer a perfect solution for Fast Food, Pizza, Burger, Sushi, and Steak restaurants and everyone else involved in food services.</p>
+    </div>
+
+    <img src="https://martfury.pl/testo/shopify/assests/images/img-03.png" alt="Onion" id="onion">
+
+    <div class="image-container">
+        <div class="image-card">
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-1.jpg" alt="Layout 1">
+            <div class="card-info">
+                <h3>BURGER LAYOUT #1</h3>
+                <p>( Demo #1 )</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-2.jpg" alt="Layout 2">
+            <div class="card-info">
+                <h3>BURGER LAYOUT #2</h3>
+                <p>( Demo #2 )</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-3.jpg" alt="Layout 3">
+            <div class="card-info">
+                <h3>BURGER LAYOUT #3</h3>
+                <p>( Demo #3 )</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-4.jpg" alt="Layout 4">
+            <div class="card-info">
+                <h3>BURGER LAYOUT #4</h3>
+                <p>( Demo #4 )</p>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-5.jpg" alt="Layout 5">
+            <div class="card-info">
+                <h3>PIZZA LAYOUT #1</h3>
+                <p>( Demo #5 )</p>
+            </div>
+        </div>
+        <div class="image-card">
+          <div>
+            <img src="https://martfury.pl/testo/shopify/assests/images/layout-6.jpg" alt="Layout 6">
+          </div>
+              <div class="card-info">
+                <h3>PIZZA LAYOUT #2</h3>
+                <p>( Demo #6 )</p>
+               </div>
+        </div>
+    </div>
+
+    <div class="banner-section">
+        <div class="banner-text-container">
+            <h4>ALL IN ONE PACKAGE</h4>
+            <h3>PREMADE COLLECTIONS</h3>
+            <p>Mix and match from over 80 exclusive section UI blocks. All blocks are fully customizable. Create something unique and beautifully tailored to your needs in only a few minutes.</p>
+        </div>
+    </div>
+
+    <img src="https://martfury.pl/testo/shopify/assests/images/banner-1-img.png" alt="Banner Image" class="banner-image">
+
+    <div class="inner-pages-section">
+        <div class="inner-pages-title">16 INNER PAGES</div>
+        <div class="inner-pages-container">
+            <div class="inner-pages-text">
+                Testo offers a vast number of pre-made inner pages which will save your time when building a website.
+                Select a page and check it out!
+            </div>
+            <img src="https://martfury.pl/testo/shopify/assests/images/img-03.png" alt="Inner Pages Image" class="inner-pages-image">
+            <img src="https://martfury.pl/testo/shopify/assests/images/img-04.png" alt="leaf" id="leaf">
+        </div>
+    </div>
+    
+    <div class="small-card-container">
+        <div class="small-card">
+            <div class="card-image">
+                <img src="https://martfury.pl/testo/shopify/assests/images/about.jpg" alt="About Page">
+            </div>
+            <div class="small-card-text">ABOUT PAGE</div>
+        </div>
+        <div class="small-card">
+            <div class="card-image">
+                <img src="https://martfury.pl/testo/shopify/assests/images/team.jpg" alt="Team Page">
+            </div>
+            <div class="small-card-text">TEAM PAGE</div>
+        </div>
+        <div class="small-card">
+            <div class="card-image">
+                <img src="https://martfury.pl/testo/shopify/assests/images/gift-cards.jpg" alt="Gift Cards Page">
+            </div>
+            <div class="small-card-text">GIFT CARDS PAGE</div>
+        </div>
+        <div class="small-card">
+            <div class="card-image">
+                <img src="https://martfury.pl/testo/shopify/assests/images/menu-1.jpg" alt="Menu-#1 Page">
+            </div>
+            <div class="small-card-text">MENU-#1 - TABS CARDS</div>
+        </div>
+    
+    <div class="small-card" style="margin-top: 20px;">
+      <div class="card-image">
+          <img src="https://martfury.pl/testo/shopify/assests/images/menu-2.jpg" alt="Menu-#2 Page">
+      </div>
+      <div class="small-card-text">MENU-#2 - PAGE</div>
+  </div>
+  <div class="small-card" style="margin-top: 20px;">
+      <div class="card-image">
+          <img src="https://martfury.pl/testo/shopify/assests/images/menu-3.jpg" alt="Menu-#3 Page">
+      </div>
+      <div class="small-card-text">MENU-#3 - PAGE</div>
+  </div>
+  <div class="small-card" style="margin-top: 20px;">
+      <div class="card-image">
+          <img src="https://martfury.pl/testo/shopify/assests/images/product-single.jpg" alt="Product Single Page">
+      </div>
+      <div class="small-card-text">PRODUCT SINGLE - PAGE</div>
+  </div>
+  <div class="small-card" style="margin-top: 20px;">
+      <div class="card-image">
+          <img src="https://martfury.pl/testo/shopify/assests/images/cart.jpg" alt="Cart Page">
+      </div>
+      <div class="small-card-text">CART - PAGE</div>
+  </div>
+</div>
+
+    <div class="second-banner-section">
+        <h4>MAKE YOUR OWN</h4>
+        <h3>STUNNING MENU</h3>
+        <p>Testo comes with 3 ready-to-use stunning menu layouts. Create a remarkable menu for your establishment without being a professional designer.</p>
+    </div>
+
+    <img src="https://martfury.pl/testo/shopify/assests/images/banner-2-img.png" alt="Second Banner Image" class="second-banner-image">
+
+    <div class="copyright-section">
+        <p style="color: #bbb; text-align: center;">Designed by Jthemes</p>
+        <p style="color: #bbb; text-align: center;">© 2024 Testo. All Rights Reserved</p>
+    </div>
+</body>
+</html>
